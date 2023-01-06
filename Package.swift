@@ -1,10 +1,9 @@
 // swift-tools-version: 5.7
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
 import PackageDescription
 
 let package = Package(
     name: "SwiftSearcher",
+    platforms: [ .macOS(.v13), ],
     products: [
         .executable(name: "sws",
             targets: ["sws"]),
@@ -28,9 +27,9 @@ let package = Package(
                 "lib_InternalSwiftSyntaxParser",
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 .product(name: "SwiftSyntax", package: "swift-syntax"),
-                .product(name: "SQLite", package: "SQLite.swift"), 
-                
-                ]),
+                .product(name: "SwiftSyntaxParser", package: "swift-syntax"),
+                .product(name: "SQLite", package: "SQLite.swift"),
+            ]),
         .testTarget(
             name: "SwiftSearcherCoreTests",
             dependencies: ["SwiftSearcherCore"]),
