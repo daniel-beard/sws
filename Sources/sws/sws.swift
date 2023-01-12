@@ -11,7 +11,7 @@ struct SWS: AsyncParsableCommand {
     mutating func run() async throws {
         let start = Date().timeIntervalSince1970
 
-        let searcher = SwiftSearcher(directory: "~/Dev/personal/SwiftSearcher", searchString: searchString)
+        let searcher = SwiftSearcher(directory: "~/Dev/personal", searchString: searchString)
         searcher.search()
 
         let end = Date().timeIntervalSince1970

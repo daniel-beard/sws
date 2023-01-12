@@ -82,10 +82,26 @@ public extension SyntaxProtocol {
     }
 }
 
+/// Converts a node into a source location
+func sourceLocation(forNode node: SyntaxProtocol, filePath: String, tree: SourceFileSyntax) -> SourceLocation {
+    let converter = SourceLocationConverter(file: filePath, tree: tree)
+    return node.startLocation(converter: converter)
+}
+
+func _modifiersString(_ modifiers: ModifierListSyntax?) -> String {
+    modifiers?.map({ attr in
+        attr.tokens.map({ $0.text }).joined(separator: "")
+    }).joined(separator: " ") ?? ""
+}
+
 extension FunctionDeclSyntax {
-    func modifiersString() -> String {
-        modifiers?.map({ (attr) in
-            attr.tokens.map({ $0.text }).joined(separator: "")
-        }).joined(separator: " ") ?? ""
-    }
+    func modifiersString() -> String { _modifiersString(modifiers) }
+}
+
+extension ClassDeclSyntax {
+    func modifiersString() -> String { _modifiersString(modifiers) }
+}
+
+extension StructDeclSyntax {
+    func modifiersString() -> String { _modifiersString(modifiers) }
 }

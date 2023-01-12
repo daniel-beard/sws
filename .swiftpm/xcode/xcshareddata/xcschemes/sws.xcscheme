@@ -78,6 +78,10 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "func:/run/|modifiers:/mutating|private|public/"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "class:/GameManager|Person/"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
