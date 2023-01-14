@@ -1,0 +1,5 @@
+framework module _InternalSwiftSyntaxParser {
+  umbrella header "SwiftSyntaxParser.h"
+  export *
+  module * { export * }
+}

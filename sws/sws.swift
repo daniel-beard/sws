@@ -1,6 +1,5 @@
 import ArgumentParser
 import Foundation
-import SwiftSearcherCore
 
 @main
 struct SWS: AsyncParsableCommand {

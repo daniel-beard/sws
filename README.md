@@ -5,9 +5,10 @@ A limited semantic search for Swift codebases.
 ## TODO
 
 - [x] Implement simple parser to start with
-- [ ] Implement types for matching and filtering
-- [ ] Stream output through formatters
-- [ ] Test on a sample project
+- [x] Implement types for matching and filtering
+- [x] Stream output through formatters
+- [x] Test on a sample project
+- [ ] Get a working CI
 - [ ] Add tests
 
 ## Proposed Search Syntax
