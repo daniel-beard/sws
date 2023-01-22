@@ -10,7 +10,8 @@ struct SWS: AsyncParsableCommand {
     mutating func run() async throws {
         let start = Date().timeIntervalSince1970
 
-        let searcher = SwiftSearcher(directory: "~/Dev/personal", searchString: searchString)
+        let workingDir = FileManager.default.currentDirectoryPath
+        let searcher = SwiftSearcher(directory: workingDir, searchString: searchString)
         searcher.search()
 
         let end = Date().timeIntervalSince1970

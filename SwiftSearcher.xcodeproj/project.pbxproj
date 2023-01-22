@@ -12,7 +12,7 @@
 		2B34F5AE2971029400068DC0 /* SwiftParsec in Frameworks */ = {isa = PBXBuildFile; productRef = 2B34F5AD2971029400068DC0 /* SwiftParsec */; };
 		2B34F5B12971031A00068DC0 /* SwiftSyntax in Frameworks */ = {isa = PBXBuildFile; productRef = 2B34F5B02971031A00068DC0 /* SwiftSyntax */; };
 		2B34F5B32971031A00068DC0 /* SwiftSyntaxParser in Frameworks */ = {isa = PBXBuildFile; productRef = 2B34F5B22971031A00068DC0 /* SwiftSyntaxParser */; };
-		2B34F5B62971038F00068DC0 /* lib_InternalSwiftSyntaxParser.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B34F5B42971034700068DC0 /* lib_InternalSwiftSyntaxParser.xcframework */; };
+		2B34F5B62971038F00068DC0 /* lib_InternalSwiftSyntaxParser.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B34F5B42971034700068DC0 /* lib_InternalSwiftSyntaxParser.xcframework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		2B34F5C2297105CF00068DC0 /* Reporters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34F5B9297105CF00068DC0 /* Reporters.swift */; };
 		2B34F5C3297105CF00068DC0 /* SwiftSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34F5BA297105CF00068DC0 /* SwiftSearcher.swift */; };
 		2B34F5C4297105CF00068DC0 /* Traversal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34F5BC297105CF00068DC0 /* Traversal.swift */; };
@@ -31,16 +31,6 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
-		};
-		2B34F588297101C600068DC0 /* Embed Libraries */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Libraries";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -147,7 +137,6 @@
 				2B34F5682971011800068DC0 /* Sources */,
 				2B34F5692971011800068DC0 /* Frameworks */,
 				2B34F56A2971011800068DC0 /* CopyFiles */,
-				2B34F588297101C600068DC0 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -179,7 +168,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2B34F5672971011800068DC0 /* Build configuration list for PBXProject "sws" */;
+			buildConfigurationList = 2B34F5672971011800068DC0 /* Build configuration list for PBXProject "SwiftSearcher" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -340,6 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6T8835Q6XM;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MARKETING_VERSION = 0.1;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-dead_strip_dylibs",
@@ -353,15 +343,20 @@
 		2B34F5752971011800068DC0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6T8835Q6XM;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 6T8835Q6XM;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MARKETING_VERSION = 0.1;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-dead_strip_dylibs",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.danielbeard.sws;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -369,7 +364,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2B34F5672971011800068DC0 /* Build configuration list for PBXProject "sws" */ = {
+		2B34F5672971011800068DC0 /* Build configuration list for PBXProject "SwiftSearcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2B34F5712971011800068DC0 /* Debug */,
