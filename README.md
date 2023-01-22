@@ -24,9 +24,9 @@ Done in: 13.663769ms
 
 ### Implemented filters
 
-- `modifiers`
+- `modifiers`:
   - Search a matched nodes modifiers as a regex. 
-	- Example: Matching a function that specifies `private` or `internal`: `func:/myFunc/|modifiers:/private|internal/`
+  - Example: Matching a function that specifies `private` or `internal`: `func:/myFunc/|modifiers:/private|internal/`
 	
 ## Proposed Search Syntax
 
